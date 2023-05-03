@@ -1,0 +1,26 @@
+/* index.css */
+
+body{background: #faf3eb;}
+.main{position: absolute;left: 50%; top: 30%; transform: translateX(-50%);text-align: center;}
+.main>p{font-size: 5rem;color: #25211c;text-transform: uppercase;font-weight: bold;}
+.main>p>b{color: #ff9a00;}
+.main span {border-right: .05em solid;animation: caret 1s steps(1) infinite;}
+
+@keyframes caret {
+  50% {border-color: transparent;}
+}
+
+button{z-index: 10;position: absolute;border: 2px solid #fff; padding: 10px 20px;border-radius: 30px;font-size: 3rem;bottom: 30%;left: 50%;transform: translateX(-50%);background:#25211c; color: #fff;box-shadow: 2px 2px 2px #25211c;font-weight: bold;}
+button:active{left: 50.3%;bottom: 29.7%;transform: translateX(-50%);}
+
+.loading{opacity: 0;display: flex;justify-content: center;align-items: center;width: 100vw;height: 100vh;}
+.loading>*{box-sizing: border-box;}
+
+.counter{text-align: center;}
+.counter>h2{font-weight: 100;font-size: 4rem;}
+.counter>p{font-size: 6rem;margin-top: -20px; font-weight: bold;}
+
+.loading .counter hr{background: #f60d54;border: none;height: 1px;}
+.loading .counter {position: relative;width: 200px;}
+.loading .counter p.abs {position: absolute;top: 0;width: 100%;}
+.loading .counter .color {width: 0px;overflow: hidden;color: #f60d54;}

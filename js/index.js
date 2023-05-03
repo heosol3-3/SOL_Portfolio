@@ -28,32 +28,3 @@ document.addEventListener('DOMContentLoaded',function(event){
   }
   StartTextAnimation(0);
 });
-
-const main = document.querySelector(".main")
-console.log(main);
-const btn = document.querySelector("button");
-console.log(btn);
-const loading = document.querySelector(".loading")
-btn.addEventListener("click",e=>{
-  e.preventDefault();
-  main.style.opacity = "0";
-  e.currentTarget.style.opacity = "0";
-  loading.style.opacity = "1";
-});
-
-
-$(document).ready(function() {
-  
-  var counter = 0;
-  var c = 0;
-  var i = setInterval(function(){
-      $(".loading .counter p").html(c + "%");
-      $(".loading .counter hr").css("width", c + "%");
-    counter++;
-    c++;
-      
-    if(counter == 101) {
-        clearInterval(i);
-    }
-  }, 50);
-});

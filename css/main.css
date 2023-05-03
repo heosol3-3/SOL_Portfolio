@@ -8,7 +8,7 @@
   
 }
 @media screen and (min-width: 1025px) {
-  
+
   #wrap{width: 100%;background: #FAF3EB;}
   #header{z-index: 40;position: fixed;left: 0;top: 0;width: 100vw;background: #FAF3EB;}
     .header_wrap{width: 100%; padding: 0 250px; box-sizing: border-box; display: flex; justify-content: space-between;align-items: center;border-bottom: 1px solid rgba(37, 33, 28, 0.8);box-shadow: 0 2px 3px rgba(37, 33, 28, 0.4); }

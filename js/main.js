@@ -1,3 +1,13 @@
+const circle = document.querySelector(".circle");
+console.log(circle);
+document.addEventListener("mousemove",e =>{
+  const mouseX = e.pageX;
+  const mouseY = e.pageY;
+  circle.style.left = mouseX + 'px';
+  circle.style.top = mouseY + 'px';
+});
+
+
 const contents = document.querySelectorAll("#container>div");
 console.log(contents);
 const headerWrap = document.querySelector(".header_wrap");

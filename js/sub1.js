@@ -84,6 +84,27 @@ topBt.addEventListener("click",e=>{
   });
 });
 
+//스크롤
+for(let i=0; i<contents.length;i++){
+  contents[i].addEventListener('wheel', e=> {
+    if(e.deltaY < 0){
+      let prev = e.currentTarget.previousElementSibling.offsetTop;
+      window.scroll({
+        top:prev,
+        left:0,
+        behavior:'smooth'
+      });
+    }else if(e.deltaY > 0){
+      let next = e.currentTarget.nextElementSibling.offsetTop;
+      window.scroll({
+        top:next,
+        left:0,
+        behavior:'smooth'
+      });
+    }
+  })
+}
+
 
 
 function activation(index,list){

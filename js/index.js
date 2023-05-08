@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(event){
 
-  var dataText = [ "&lt;input type='HEOSOL PORTFOLIO' / &gt;" ];
+  var dataText = [ "&lt;input type='<b>HEOSOL PORTFOLIO</b>' / &gt;" ];
   
   function typeWriter(text, i, fnCallback) {
     if (i < (text.length)) {

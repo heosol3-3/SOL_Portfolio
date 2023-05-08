@@ -90,8 +90,8 @@
   .content3_wrap>ul.tool>li:nth-of-type(5){background: url(../images/logo16.png) no-repeat 50% 0; background-size: 50%;}
 
 
-  .content3_wrap>ul>li>dl{text-align: center; line-height: 2;}
-  .content3_wrap>ul>li>dl>dt{font-size: 2.3rem; font-weight: bold;}
+  .content3_wrap>ul>li>dl{text-align:justify; line-height: 2;}
+  .content3_wrap>ul>li>dl>dt{text-align: center;font-size: 2.3rem; font-weight: bold;}
   .content3_wrap>ul>li>dl>dd{font-size: 1.6rem}
 
 

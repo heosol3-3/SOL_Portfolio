@@ -29,7 +29,7 @@ lis.forEach((li,i)=>{
     e.preventDefault();
     activation(i,lis);
     window.scroll({
-      top: (i*devHeight),
+      top: (i*devHeight-10),
       left:0,
       behavior:"smooth"
     });

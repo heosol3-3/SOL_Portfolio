@@ -29,7 +29,7 @@ lis.forEach((li,i)=>{
     e.preventDefault();
     activation(i,lis);
     window.scroll({
-      top: (i*devHeight-10),
+      top: (i*devHeight),
       left:0,
       behavior:"smooth"
     });
@@ -104,6 +104,23 @@ for(let i=0; i<contents.length;i++){
     }
   })
 }
+
+//content1 사진 흔들리기
+const content1 = document.querySelector(".content1_wrap");
+console.log(content1);
+
+content1.addEventListener("mousemove",e=>{
+  let posX = e.pageX/30;
+  let posY = e.pageY/10;
+
+  let content1bg = document.querySelector(".content1_bg");
+  console.log(content1bg);
+  content1bg.style.backgroundPosition = 150 + posX + "px"
+  content1bg.style.backgroundPosition = posY + "px"
+
+
+})
+
 
 
 

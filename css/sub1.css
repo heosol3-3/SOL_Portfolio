@@ -68,8 +68,8 @@
 
 
   .content3_wrap{position: relative;display: flex;flex-direction: column;}
-  .content3_wrap>ul{display: flex;flex-wrap: wrap; justify-content: space-around; transition: all 0.3s ease 0s;}
-  .content3_wrap>ul>li{padding: 100px 0 0;margin: 20px 50px; width: 180px;letter-spacing: -1px;}
+  .content3_wrap>ul{display: flex;flex-wrap: wrap; justify-content: space-between; transition: all 0.3s ease 0s;}
+  .content3_wrap>ul>li{padding: 100px 0 0;margin: 20px 40px; width: 140px;letter-spacing: -1px;}
   .content3_wrap>ul.skill>li:first-of-type{background: url(../images/logo01.png) no-repeat 50% 0; background-size: 50%;}
   .content3_wrap>ul.skill>li:nth-of-type(2){background: url(../images/logo02.png) no-repeat 50% 0;background-size: 50%;}
   .content3_wrap>ul.skill>li:nth-of-type(3){background: url(../images/logo03.png) no-repeat 50% 0;background-size: 50%;}

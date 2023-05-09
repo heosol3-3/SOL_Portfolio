@@ -106,19 +106,44 @@ for(let i=0; i<contents.length;i++){
 }
 
 //content1 사진 흔들리기
-const content1 = document.querySelector(".content1_wrap");
+const content1 = document.querySelector(".content1_wrapbg");
 console.log(content1);
+let content1bg = document.querySelector(".content1_bg");
+console.log(content1bg);
 
 content1.addEventListener("mousemove",e=>{
-  let posX = e.pageX/30;
-  let posY = e.pageY/10;
 
-  let content1bg = document.querySelector(".content1_bg");
-  console.log(content1bg);
-  content1bg.style.backgroundPosition = 150 + posX + "px"
-  content1bg.style.backgroundPosition = posY + "px"
+})
 
+content1.addEventListener("mouseover",e=>{
+  content1bg.style.backgroundSize = "103%";
+})
+content1.addEventListener("mouseout",e=>{
+  content1bg.style.backgroundSize = "100%";
+  content1bg.style.backgroundPosition = "50% 50%"
+})
 
+const strong = document.querySelectorAll(".content2_right>strong");
+console.log(strong);
+const b = document.querySelectorAll(".content2_right>b");
+console.log(b);
+const content2bg = document.querySelector(".content2_bg");
+
+strong.forEach((el,i) =>{
+  el.addEventListener("mouseover" , e=>{
+    content2bg.style.backgroundImage = `url('images/bg2_2.png')`
+  })
+  el.addEventListener("mouseleave", e=>{
+    content2bg.style.backgroundImage = `url('images/bg2_1.jpg')`
+  })
+})
+b.forEach((el,i) => {
+  el.addEventListener("mouseover" , e=>{
+    content2bg.style.backgroundImage = `url('images/bg2_3.jpg')`
+  })
+  el.addEventListener("mouseleave", e=>{
+    content2bg.style.backgroundImage = `url('images/bg2_1.jpg')`
+  })
 })
 
 

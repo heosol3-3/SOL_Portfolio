@@ -111,16 +111,13 @@ console.log(content1);
 let content1bg = document.querySelector(".content1_bg");
 console.log(content1bg);
 
-content1.addEventListener("mousemove",e=>{
-
-})
 
 content1.addEventListener("mouseover",e=>{
-  content1bg.style.backgroundSize = "103%";
+  content1bg.style.backgroundSize = "105%";
 })
 content1.addEventListener("mouseout",e=>{
   content1bg.style.backgroundSize = "100%";
-  content1bg.style.backgroundPosition = "50% 50%"
+  content1bg.style.backgroundPosition = "50% 70%"
 })
 
 const strong = document.querySelectorAll(".content2_right>strong");

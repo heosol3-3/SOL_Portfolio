@@ -105,7 +105,56 @@ for(let i=0; i<contents.length;i++){
   })
 }
 
-//content1 사진 흔들리기
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+console.log(prev);
+console.log(next);
+
+
+//4번째 화살표
+window.addEventListener('scroll', e=>{
+  let scrolls = document.querySelector('html').scrollTop;
+  if(scrolls>=(devHeight*3)-3 && scrolls<(devHeight*4)-3){
+    prev.classList.add("on");
+    next.classList.add("on");
+  }else{
+    prev.classList.remove("on");
+    next.classList.remove("on");
+  }
+})
+
+
+
+devWidth = window.innerWidth;
+console.log(devWidth);
+const portlis = document.querySelectorAll(".portfolio>li");
+console.log(portlis);
+// for(let i=0; i<portlis.length; i++){
+//   portlis[i].style.height = `${849}px`
+//   portlis[i].style.width = `73.95vw`
+// }
+
+const port = document.querySelector(".portfolio");
+console.log(port);
+// next
+next.addEventListener('click', e=>{
+  e.preventDefault();
+  let lastIndex = port.children.length-1 //마지막 배너
+  let lastList = port.children[lastIndex].cloneNode(true);//마지막li 복제
+  port.removeChild(port.children[lastIndex]);
+  port.insertBefore(lastList,port.children[0]);
+});
+// prev
+prev.addEventListener('click', e=>{
+  e.preventDefault();
+  let firstList = port.children[0].cloneNode(true);
+  port.removeChild(port.children[0]);
+  port.appendChild(firstList);
+});
+
+
+
+//content1 사진 확대
 const content1 = document.querySelector(".content1_wrapbg");
 console.log(content1);
 let content1bg = document.querySelector(".content1_bg");

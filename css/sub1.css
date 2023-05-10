@@ -96,17 +96,35 @@
   .content3_wrap>ul>li>dl>dd{font-size: 1.6rem}
 
 
-  /* footer */
+  
+  /* content4 */
 
+  button.prev,button.next{position: fixed;top: 50%;padding: 130px 0 0;transform: translateY(-50%);background: none;outline: none;border: none;font-size: 5rem;cursor: pointer;opacity: 0;transition: all 0.2s ease 0s;}
+  .prev.on,.next.on{z-index: 20;position: fixed;top: 50%;padding: 130px 0 0;transform: translateY(-50%);background: none;outline: none;border: none;font-size: 5rem;cursor: pointer;opacity: 1;}
+  .prev, .prev.on{left: 3.04vw;}
+  .next, .next.on{right: 3.04vw;}
+
+  .content4_wrap{position: relative;}
+
+  .portfolio{width: 500%;display: flex;}
+  .portfolio>li{width: 73.95vw;}
+
+  .portfolio>li>div>h3{font-size: 3rem;font-weight: bold;text-align: center;line-height: 7;}
+  .content4_1flex{display: flex;flex-direction: row;flex-wrap: nowrap;padding: 20px 150px 0; box-sizing: border-box;}
+  .content4_1mockup>img{width: 600px;}
+  .content4_1text{margin-left: 60px;font-size: 2rem;line-height: 2.5;}
+
+
+  /* footer */
+  
   .footer_button{position: relative;display: flex;flex-direction: column;flex-wrap: nowrap;justify-content: center;}
   .footer_button>li{position: relative;}
-
+  
   .footer_button>li>a{display: block;width: 50px;height: 50px;font-size:1.8rem;background: rgb(37, 33, 28);line-height: 50px;border-radius: 50px;margin-top: 20px;color: #fff;}
-
+  
   .footer_button>li.leng>a::after{content: "";display: block;position: absolute;z-index: -1;left: 0;top: 0;width:50px;height: 50px;margin-top: 20px;background: rgb(37, 33, 28);border-radius: 50px;transition: all 0.5s ease 0s;}
   .footer_button>li:hover>a::after{width: 150px;transform-origin: right center;}
-
-
+  
   .footer_button>li>a i{position: absolute;left: 50%;top: 50%;transform: translate(-50%);}
   .footer_button>li>ul{position: absolute;display: flex;left: 60px;top: 50%;font-size: 1.3rem;}
   .footer_button>li>ul>li{margin-right: 30px;}
@@ -114,13 +132,8 @@
   .footer_button>li:first-of-type:hover>ul>li>a{opacity: 1;}
 
 
-  /* content4 */
-  .content4_wrap{position: relative;height: 100%;}
-  .prev,.next{position: absolute;top: 50%;transform: translateY(-50%);background: none;outline: none;border: none;font-size: 5rem;cursor: pointer;}
-  .prev{left: 1.04vw;}
-  .next{right: 1.04vw;}
 
-}
+}  
  
 
 

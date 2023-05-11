@@ -66,9 +66,13 @@ con3Btns.forEach((con3Btn,i) => {
     if(con3Btns[0].className == "on"){
       tool.style.opacity = "0";
       skill.style.opacity = "1";
+      tool.style.zIndex = "0";
+      skill.style.zIndex = "1";
     }else{
       skill.style.opacity = "0"
       tool.style.opacity = "1";
+      tool.style.zIndex = "1";
+      skill.style.zIndex = "0";
     }
   });
 })
@@ -178,9 +182,11 @@ const content2bg = document.querySelector(".content2_bg");
 strong.forEach((el,i) =>{
   el.addEventListener("mouseover" , e=>{
     content2bg.style.backgroundImage = `url('images/bg2_2.png')`
+    content2bg.style.backgroundSize = `300%`
   })
   el.addEventListener("mouseleave", e=>{
     content2bg.style.backgroundImage = `url('images/bg2_1.jpg')`
+    content2bg.style.backgroundSize = `200%`
   })
 })
 b.forEach((el,i) => {

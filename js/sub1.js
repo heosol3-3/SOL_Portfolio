@@ -1,11 +1,42 @@
-const circle = document.querySelector(".circle");
-console.log(circle);
-document.addEventListener("mousemove",e =>{
-  const mouseX = e.pageX;
-  const mouseY = e.pageY;
-  circle.style.left = mouseX + 'px';
-  circle.style.top = mouseY + 'px';
-});
+// main.js
+// 로딩페이지
+function imagesProgress(){
+  let container = document.querySelector("#progress");//div
+  let progressBar = document.querySelector(".progress-bar"); //span
+  let progressText = document.querySelector(".progress-text"); //span
+  let imgLoad = imagesLoaded('body'); 
+  let imgTotal = imgLoad.images.length; //body 전체 이미지 수를 저장
+  let imgLoaded = 0;//이미지 로딩한 숫자
+  let current = 0; //text에 들어갈 숫자
+  let progressTimer = setInterval(updateProgress,1000/60);
+  
+  imgLoad.on("progress",function(){
+    imgLoaded++;
+  })
+  
+  function updateProgress(){
+    //bar width:0%~100%
+    //text 0~100%
+    let target = (imgLoaded / imgTotal) * 100;
+    current += (target - current) * 0.1;
+  
+    progressBar.style.width = current + '%';
+    progressText.innerText = Math.floor(current) + '%';
+  
+    if(current>=100){
+      clearInterval(progressTimer);
+      container.classList.add("progress-complete");
+      container.classList.add("on");
+    }
+    if(current>99.9){
+      current=100;
+    }
+  }
+  
+  }
+  
+  imagesProgress();
+
 
 
 const contents = document.querySelectorAll("#container>div");
@@ -144,16 +175,12 @@ console.log(port);
 next.addEventListener('click', e=>{
   e.preventDefault();
   let lastIndex = port.children.length-1 //마지막 배너
-  let lastList = port.children[lastIndex].cloneNode(true);//마지막li 복제
-  port.removeChild(port.children[lastIndex]);
-  port.insertBefore(lastList,port.children[0]);
+
 });
 // prev
 prev.addEventListener('click', e=>{
   e.preventDefault();
-  let firstList = port.children[0].cloneNode(true);
-  port.removeChild(port.children[0]);
-  port.appendChild(firstList);
+
 });
 
 

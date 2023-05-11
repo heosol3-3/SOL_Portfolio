@@ -198,6 +198,15 @@ b.forEach((el,i) => {
   })
 })
 
+//클릭하면 복사되게 하기
+const mail = document.querySelector(".content5_left>p>span");
+console.log(mail);
+mail.addEventListener("click", e=>{
+  e.preventDefault();
+  navigator.clipboard.writeText("diarysamz3@gmail.com").then(() =>{
+    alert("COPY OK!");
+  })
+})
 
 
 
